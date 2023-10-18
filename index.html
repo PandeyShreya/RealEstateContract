@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real Estate Contract</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.4/dist/web3.min.js"></script>
+</head>
+
+<body>
+    <h1>Real Estate Contract</h1>
+
+    <div class="container">
+        <div class="property-form">
+            <h2>Add Property</h2>
+            <input type="text" id="ownerName" placeholder="Owner Name" />
+            <input type="number" id="price" placeholder="Price (ETH)" />
+            <input type="text" id="userAddress" placeholder="User Address" />
+            <input type="submit" value="Add Property" id="addPropertyBtn" />
+        </div>
+
+        <div class="property-form">
+            <h2>Update Property for Sale</h2>
+            <input type="number" id="propertyId" placeholder="Property ID" />
+            <input type="number" id="newPrice" placeholder="New Price (ETH)" />
+            <input type="text" id="updateUserAddress" placeholder="User Address" />
+            <input type="submit" value="Update Property for Sale" id="updatePropertyBtn" />
+        </div>
+
+        <div class="property-form">
+            <h2>Buy Property</h2>
+            <input type="number" id="buyPropertyId" placeholder="Property ID" />
+            <input type="text" id="newOwnerName" placeholder="New Owner Name" />
+            <input type="text" id="buyUserAddress" placeholder="User Address" />
+            <input type="text" id="buyOwnerAddress" placeholder="Owner Address" />
+            <input type="submit" value="Buy Property" id="buyPropertyBtn" />
+        </div>
+    </div>
+
+    <h2>Property List</h2>
+    <table id="propertyListTable">
+        <thead>
+            <tr>
+                <th>Property ID</th>
+                <th>Owner</th>
+                <th>Owner Name</th>
+                <th>Price (ETH)</th>
+                <th>For Sale</th>
+            </tr>
+        </thead>
+        <tbody id="propertyList">
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
